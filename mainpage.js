@@ -1,5 +1,6 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+console.log("Data added successfully");
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -27,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
             await addDoc(usersDoc, {
                 username: "fgrreloaded",
                 email: "email_id@gmail.com",
-                profile_picture: "https://images.unsplash.com/photo-1513789181297-6f2ec112c0bc"
             });
             console.log("Data added successfully");
         } catch (error) {
@@ -37,4 +37,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
     addDataBtn.addEventListener("click", addData);
 });
-
